@@ -1,0 +1,94 @@
+.todo-container {
+	width: 100%;
+	max-width: 400px;
+	margin: 20px auto;
+	padding: 20px;
+	background: #ffffff;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	text-align: center;
+}
+
+.todo-title {
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 15px;
+}
+
+.todo-new {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+}
+
+.todo-new input {
+	width: 70%;
+	padding: 10px;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.todo-new button {
+	padding: 10px 15px;
+	background: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.todo-new button:hover {
+	background: #0056b3;
+}
+
+.todo-data {
+	margin-top: 10px;
+	font-size: 18px;
+	color: #555;
+	padding: 10px;
+	background: #f8f9fa;
+	border-radius: 5px;
+}
+.todo-image {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.logo {
+  height: 8em; /* Làm logo to hơn */
+  padding: 1.5em;
+  will-change: filter, transform;
+  transition: filter 300ms, transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+  transform: scale(1.1); /* Phóng to nhẹ khi hover */
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Chỉ áp dụng animation nếu người dùng không yêu cầu giảm chuyển động */
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin infinite 10s linear; /* Quay nhanh hơn (10s/lượt) */
+  }
+}
+

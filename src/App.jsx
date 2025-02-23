@@ -1,39 +1,19 @@
-import { useState } from "react";
-import "./App.css";
+import "./components/todo/todo.css";
+import TodoData from "./components/todo/TodoData";
+import TodoNew from "./components/todo/TodoNew";
 import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import SecondComponent from "./components/learn/SecondComponent";
-import MyComponent from "./components/learn/MyComponent";
 
-function App() {
-
-	const [count, setCount,] = useState(0);
+const App = () => {
 	return (
-		<>
-			<div>
-				<a href="https://vitejs.dev" target="_blank">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
-				</a>
-				<a href="https://react.dev" target="_blank">
-					<img src={reactLogo} className="logo react" alt="React logo" />
-				</a>
+		<div className="todo-container">
+			<div className="todo-title">Todo List</div>
+			<TodoNew />
+			<TodoData />
+			<div className="'todo-image">
+				<img src={reactLogo}className="logo" alt="React Logo" />
 			</div>
-			<h1>Hello, i will code again from this day!</h1>
-			<MyComponent />
-			<SecondComponent />
-			<div className="card">
-				<button onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</button>
-				<p>
-					Edit <code>src/App.jsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className="read-the-docs">
-				Click on the Vite and React logos to learn more
-			</p>
-		</>
+		</div>
 	);
-}
+};
 
 export default App;
