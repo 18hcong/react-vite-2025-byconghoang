@@ -6,6 +6,13 @@ import viteLogo from "/vite.svg";
 function App() {
 	const [count, setCount] = useState(0);
 
+	// 	function myFunction(){
+	// 	console.log(">>run my Function")
+	// }
+	const myFunction = () => {
+		console.log(">>run my Function");
+	};
+	myFunction();
 	return (
 		<>
 			<div>
