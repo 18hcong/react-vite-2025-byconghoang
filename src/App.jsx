@@ -22,9 +22,28 @@ const App = () => {
 		country: "Viet Nam",
 	};
 
+	//không được để trống input
+	//không được trùng tên
 	const addNewTodo = (name) => {
-		alert(`call me ${name}`);
-	};
+		if (!name.trim()) {
+			alert("Nội dung nhập không phù hợp, mời nhập lại!");
+			return;
+	}
+
+	//input bị trùng thì không cho thêm
+	const isDuplicate = todoList.some(todo => todo.name.toLowerCase() === name.toLowerCase());
+    if (isDuplicate) {
+        alert("Nội dung đã tồn lại!");
+        return;
+    }
+
+    const newId = todoList.length > 0 ? Math.max(...todoList.map(todo => todo.id)) + 1 : 1;
+    const newTodo = {
+        id: newId,
+        name: name
+    };
+    setTodoList([...todoList, newTodo]);
+};
 	//{key: value}
 	return (
 		<div className="todo-container">
@@ -37,6 +56,7 @@ const App = () => {
 				age={age} 
 				data={data}
 				todoList={todoList}
+				setTodoList={setTodoList}
 			/>
 			<div className="todo-image">
 				<img src={reactLogo} className="logo" alt="React Logo" />

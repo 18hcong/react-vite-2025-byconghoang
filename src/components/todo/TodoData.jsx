@@ -1,17 +1,19 @@
-const TodoData = (props) => {
-	//props là một obejct chứa các thuộc tính truyền vào từ component cha.
+const TodoData = ({ todoList, setTodoList }) => {
 
-	const { name, age, data } = props;
+	const handleDelete = (id) => {
+		const updatedList = todoList.filter(todo => todo.id !== id);
+		setTodoList(updatedList);
+	};
 
-	// console.log(">>check props", props);
 	return (
 		<div className="todo-data">
-			<div>My name is: {name} </div>
-			<div>Leaning React</div>
-			<div>Watching Youtube</div>
-      <div>
-          {JSON.stringify(props.todoList)}
-      </div>
+			{todoList.map((item) => (
+				<div className="todo-item" key={item.id}>
+					<div>{item.name}</div>
+					<button onClick={() => handleDelete(item.id)}>Delete</button>
+				</div>
+			))}
+			<div>{JSON.stringify(todoList)}</div>
 		</div>
 	);
 };

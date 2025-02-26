@@ -1,20 +1,20 @@
 .todo-container {
-	width: 100%;
-	max-width: 400px;
-	margin: 20px auto;
+	width: 60%; /* Tăng độ rộng lên 60% màn hình */
+	max-width: 600px; /* Giới hạn tối đa để không quá lớn trên màn hình rộng */
+	margin: 20px auto; /* Căn giữa */
+	background: #fff;
 	padding: 20px;
-	background: #ffffff;
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 	border-radius: 10px;
-	text-align: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .todo-title {
-	font-size: 2.5rem;
+	text-align: center;
+	font-size: 30px;
 	font-weight: bold;
-	color: #333;
 	margin-bottom: 15px;
 }
+
 
 .todo-new {
 	display: flex;
@@ -23,11 +23,11 @@
 }
 
 .todo-new input {
-	width: 70%;
+	width: 30%;
 	padding: 10px;
 	border: 2px solid #ddd;
 	border-radius: 5px;
-	font-size: 16px;
+	font-size: 18px;
 }
 
 .todo-new button {
@@ -92,3 +92,30 @@
   }
 }
 
+.todo-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #f4f4f4;
+	padding: 10px;
+	margin: 5px 0;
+	border-radius: 5px;
+}
+
+.todo-item div {
+	flex: 1;
+}
+
+button {
+	background-color: #ff4d4d;
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+	background-color: #cc0000;
+}
