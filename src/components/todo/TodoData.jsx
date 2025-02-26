@@ -1,15 +1,18 @@
 const TodoData = (props) => {
+	//props là một obejct chứa các thuộc tính truyền vào từ component cha.
 
-  //props là một obejct chứa các thuộc tính truyền vào từ component cha.
+	const { name, age, data } = props;
 
-   const {name, age, data} = props;
-  // console.log(">>check props", props);
-  return(
-    <div className="todo-data">
-      <div>My name is: {name} </div>
-				<div>Leaning React</div>
-				<div>Watching Youtube</div>
-			</div>
-  )
-}
+	// console.log(">>check props", props);
+	return (
+		<div className="todo-data">
+			<div>My name is: {name} </div>
+			<div>Leaning React</div>
+			<div>Watching Youtube</div>
+      <div>
+          {JSON.stringify(props.todoList)}
+      </div>
+		</div>
+	);
+};
 export default TodoData;
