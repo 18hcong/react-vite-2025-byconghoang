@@ -14,7 +14,7 @@ const MyComponent = () => {
 	return (
 		<>
 			<div>{JSON.stringify(cong)} & hoidanit update</div>
-			<div>{console.log("Cong Hoang Pham")}</div>
+			{/* <div>{console.log("Cong Hoang Pham")}</div> */}
 			<p className="myfirst" style={{ borderRadius: "10px" }}>
 				This is my first component.
 			</p>
