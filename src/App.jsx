@@ -9,6 +9,13 @@ const App = () => {
 
 	//không được để trống input
 	//không được trùng tên
+
+	// const handleDelete = (id) => {
+	// 	console.log("id", id);
+	// 	const updatedList = todoList.filter((todo) => todo.id !== id);
+	// 	setTodoList(updatedList);
+	// };
+
 	const addNewTodo = (name) => {
 		if (!name.trim()) {
 			alert("Nội dung nhập không phù hợp, mời nhập lại!");
@@ -34,6 +41,13 @@ const App = () => {
 		};
 		setTodoList([...todoList, newTodo]);
 	};
+
+	const deleteTodo = (id) => {
+		const newTodo = todoList.filter(item => item.id !== id)
+		setTodoList(newTodo)
+	}
+
+
 	//{key: value}
 	return (
 		<div className="todo-container">
@@ -47,7 +61,8 @@ const App = () => {
 				todoList.length > 0 ? 
 				<TodoData 
 					todoList={todoList} 
-					setTodoList={setTodoList} 
+					setTodoList={setTodoList}
+					deleteTodo={deleteTodo}
 				/>
 			:
 				<div className="todo-image">
